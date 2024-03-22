@@ -5,11 +5,13 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "ios-15": "react-native run-ios --simulator='iPhone 15 Pro'",
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest"
   },
   "dependencies": {
+    "@shopify/restyle": "^2.4.2",
     "react": "18.2.0",
     "react-native": "0.73.6"
   },
