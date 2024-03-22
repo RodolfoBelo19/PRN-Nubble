@@ -1,8 +1,12 @@
+import {createText} from '@shopify/restyle';
 import {
   TextProps as RNTextProps,
   Text as RNText,
   TextStyle,
 } from 'react-native';
+import {Theme} from '../../theme';
+
+const SRText = createText<Theme>();
 
 interface TextProps extends RNTextProps {
   preset?: TextVariants;
@@ -15,9 +19,9 @@ export function Text({children, style, ...rest}: TextProps) {
   const fontFamily = fonts ? $fontFamilies[fonts] : undefined;
 
   return (
-    <RNText style={[styleVariant, {fontFamily: fontFamily}, style]} {...rest}>
+    <SRText  style={[styleVariant, {fontFamily: fontFamily}, style]} {...rest}>
       {children}
-    </RNText>
+    </SRText>
   );
 }
 

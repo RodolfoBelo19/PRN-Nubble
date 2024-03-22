@@ -36,7 +36,27 @@ export const theme = createTheme({
     success: palette.greenSuccess,
     successLight: palette.greenSuccessLight,
   },
-  spacing: {},
+  spacing: {
+    s: 8,
+    m: 16,
+    l: 24,
+    xl: 40,
+  },
+  borderRadius: {
+    s: 4,
+    m: 8,
+    l: 16,
+    xl: 24,
+  },
+  textVariants: {
+    default: {},
+  },
+  breakpoints: {
+    phone: 0,
+    tablet: 768,
+    largeTablet: 1024,
+    desktop: 1280,
+  },
 });
 
 export type Theme = typeof theme;
