@@ -1,21 +1,21 @@
 import React from 'react';
-import {SafeAreaView, View} from 'react-native';
+import {SafeAreaView, TextInput, View} from 'react-native';
 import {Text} from './src/components/Text';
-import {Button} from './src/components/Button';
 import {ThemeProvider} from '@shopify/restyle';
 import {theme} from './src/theme';
-import {Box} from './src/components/Box';
+import {Icon} from './src/components/Icon';
 
 function App(): React.JSX.Element {
   return (
     <ThemeProvider theme={theme}>
       <SafeAreaView>
         <View style={{paddingHorizontal: 24}}>
-          <Text preset="headingLarge" fonts="black">
-            lorem
+          <Text marginBottom="m" preset="headingLarge">
+            Olá!
           </Text>
-          <Button marginBottom="s" title="Click me" />
-          <Button loading title="Click me" />
+          <Text marginBottom="m">
+            Digite seu e-mail e senha para acessar o app.
+          </Text>
         </View>
       </SafeAreaView>
     </ThemeProvider>

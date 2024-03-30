@@ -42,7 +42,7 @@ export const theme = createTheme({
     l: 24,
     xl: 40,
   },
-  borderRadius: {
+  borderRadii: {
     s: 4,
     m: 8,
     l: 16,
@@ -60,3 +60,4 @@ export const theme = createTheme({
 });
 
 export type Theme = typeof theme;
+export type ThemeColor = keyof Theme['colors'];
