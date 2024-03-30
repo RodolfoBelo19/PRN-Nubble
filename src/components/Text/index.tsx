@@ -36,7 +36,7 @@ type TextVariants =
   | 'paragraphCaption'
   | 'paragraphCaptionSmall';
 
-const $fontSizes: Record<TextVariants, TextStyle> = {
+export const $fontSizes: Record<TextVariants, TextStyle> = {
   headingLarge: {fontSize: 32, lineHeight: 38.4},
   headingMedium: {fontSize: 24, lineHeight: 28.8},
   headingSmall: {fontSize: 20, lineHeight: 24},
@@ -61,7 +61,7 @@ type FontVariants =
   | 'mediumItalic'
   | 'regular';
 
-const $fontFamilies = {
+export const $fontFamilies = {
   black: 'Satoshi-Black',
   blackItalic: 'Satoshi-BlackItalic',
   bold: 'Satoshi-Bold',
