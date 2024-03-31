@@ -10,7 +10,7 @@ export interface IconBase {
 
 interface IconProps {
   name: keyof typeof IconRegister;
-  color: ThemeColor;
+  color?: ThemeColor;
   size?: number;
 }
 

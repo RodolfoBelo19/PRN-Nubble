@@ -1,6 +1,7 @@
 import {createText} from '@shopify/restyle';
 import {TextStyle} from 'react-native';
 import {Theme} from '../../theme';
+import {BoxProps} from '../Box';
 
 const SRText = createText<Theme>();
 
@@ -9,9 +10,10 @@ type SRTextProps = React.ComponentProps<typeof SRText>;
 interface TextProps extends SRTextProps {
   preset?: TextVariants;
   fonts?: FontVariants;
+  boxProps?: BoxProps;
 }
 
-export function Text({children, style, ...rest}: TextProps) {
+export function Text({children, style, boxProps, ...rest}: TextProps) {
   const {preset = 'paragraphMedium', fonts} = rest;
   const styleVariant = $fontSizes[preset];
   const fontFamily = fonts ? $fontFamilies[fonts] : undefined;
@@ -20,7 +22,8 @@ export function Text({children, style, ...rest}: TextProps) {
     <SRText
       color="backgroundContrast"
       style={[styleVariant, {fontFamily: fontFamily}, style]}
-      {...rest}>
+      {...rest}
+      {...boxProps}>
       {children}
     </SRText>
   );
