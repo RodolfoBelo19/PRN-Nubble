@@ -1,11 +1,11 @@
 import {Path, Svg} from 'react-native-svg';
 
-interface ArrowLeftProps {
+interface arrowLeftIconProps {
   size?: number;
   color?: string;
 }
 
-export function ArrowLeft({size, color}: ArrowLeftProps) {
+export function arrowLeftIcon({size, color}: arrowLeftIconProps) {
   return (
     <Svg width={size} height={size} viewBox="0 0 14 14" fill="none">
       <Path

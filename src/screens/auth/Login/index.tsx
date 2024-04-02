@@ -3,8 +3,16 @@ import {TextInput} from '../../../components/TextInput';
 import {Button} from '../../../components/Button';
 import {Icon} from '../../../components/Icon';
 import {Screen} from '../../../components/Screen';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {RootStackParamList} from '../../../routes';
 
-export function Login() {
+type ScreenProps = NativeStackScreenProps<RootStackParamList, 'Login'>;
+
+export function Login({navigation}: ScreenProps) {
+  function handleSignUp() {
+    navigation.navigate('SignUp');
+  }
+
   return (
     <Screen isScrollable>
       <Text marginBottom="m" preset="headingLarge">
@@ -21,7 +29,6 @@ export function Login() {
       <TextInput
         boxProps={{mb: 'm'}}
         rightComponent={<Icon name="eyeOff" color="gray2" />}
-        errorMessage="Senha incorreta"
         label="Senha"
         secureTextEntry
         placeholder="Digite sua senha"
@@ -30,7 +37,7 @@ export function Login() {
         Esqueceu a senha?
       </Text>
       <Button mb="m" title="Entrar" />
-      <Button title="Registrar-se" preset="outline" />
+      <Button onPress={handleSignUp} title="Registrar-se" preset="outline" />
     </Screen>
   );
 }

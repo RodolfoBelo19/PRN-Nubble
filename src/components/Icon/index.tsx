@@ -2,8 +2,9 @@ import {InvisibleIcon} from '../../assets/icons/invisibleIcon';
 import {VisibleIcon} from '../../assets/icons/visibleIcon';
 import {ThemeColor} from '../../theme';
 import {useAppTheme} from '../../hooks/useAppTheme';
-import {ArrowLeft} from '../../assets/icons/arrowLeft';
-import { Pressable } from 'react-native';
+import {arrowLeftIcon} from '../../assets/icons/arrowLeftIcon';
+import {Pressable} from 'react-native';
+import {SuccessIcon} from '../../assets/icons/successIcon';
 
 export interface IconBase {
   size?: number;
@@ -40,5 +41,6 @@ export function Icon({
 const IconRegister = {
   eyeOn: VisibleIcon,
   eyeOff: InvisibleIcon,
-  arrowLeft: ArrowLeft,
+  arrowLeftIcon: arrowLeftIcon,
+  successIcon: SuccessIcon,
 };

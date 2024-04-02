@@ -1,13 +1,18 @@
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import {Button} from '../../../components/Button';
 import {PasswordInput} from '../../../components/PasswordInput/indext';
 import {Screen} from '../../../components/Screen';
 import {Text} from '../../../components/Text';
 import {TextInput} from '../../../components/TextInput';
+import { RootStackParamList } from '../../../routes';
 
-export function SignUp() {
+type ScreenProps = NativeStackScreenProps<RootStackParamList, 'SignUp'>;
+
+export function SignUp({navigation}: ScreenProps) {
   const handleSignUp = () => {
     // todo: implement sign up
     console.log('Sign up');
+    navigation.navigate('Success');
   };
 
   return (
